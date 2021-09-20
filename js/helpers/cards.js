@@ -16,7 +16,7 @@ export function resultCard({id, title, img, url, index, section}){
         </div>
         <img
           alt="${title}"
-          data-src="${img}"
+          data-src="${img.replace(/^https|http/gi, "https")}"
           onload="setTimeout(()=>{this.previousElementSibling.classList.add('active')},500)"
         >
       </div>
@@ -43,7 +43,7 @@ export function historyCard({id, title, img, url, index, section}){
         </div>
         <img
           alt="${title}"
-          data-src="${img}"
+          data-src="${img.replace(/^https|http/gi, "https")}"
           onload="setTimeout(()=>{this.previousElementSibling.classList.add('active')},500)"
         >
       </div>
@@ -70,7 +70,7 @@ export function appCard({id, title, img, url, section}) {
           <span></span><span></span><span></span>
         </div>
         <img 
-          data-src="${img}"
+          data-src="${img.replace(/^https|http/gi, "https")}"
           alt="${title}"
           onload="setTimeout(()=>{this.previousElementSibling.classList.add('active')},500)"
         >
