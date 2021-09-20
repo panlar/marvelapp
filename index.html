@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MARVEL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <style>
+      .cards-container,
+      .character-log {
+        grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+      }
+    </style>
+  </head>
+  <body>
+    <section id="menu" class="menu">
+      <div class="menu-wrapper">
+        <div id="menu-button-back" class="menu-button-back">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+          <span>BACK</span>
+        </div>
+
+        <div id="menu-items" class="menu-items">
+          <div class="menu-item active" data-item="CHARACTERS">
+            <ion-icon name="person-outline" data-item="CHARACTERS"></ion-icon>
+            <span data-item="CHARACTERS">Characters</span>
+          </div>
+
+          <div class="menu-item" data-item="COMICS">
+            <ion-icon name="book-outline" data-item="COMICS"></ion-icon>
+            <span data-item="COMICS">Comics</span>
+          </div>
+
+          <div class="menu-item" data-item="SERIES">
+            <ion-icon name="videocam-outline" data-item="SERIES"></ion-icon>
+            <span data-item="SERIES">Series</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="container">
+      <div class="container-wrapper">
+        <header class="header">
+          <div id="header-button-menu" class="header-button-menu">
+            <ion-icon name="grid-outline"></ion-icon>
+          </div>
+          <div class="header-logo">
+            <h1>MARVEL</h1>
+          </div>
+          <div id="header-button-seeker" class="header-button-seeker">
+            <ion-icon name="search-outline"></ion-icon>
+          </div>
+        </header>
+
+        <section class="app">
+          <div id="app-loader" class="app-loader active">
+            <span></span><span></span><span></span> <span></span><span></span
+            ><span></span>
+          </div>
+          <div id="app-button-top" class="app-button-top">
+            <ion-icon name="chevron-up-outline"></ion-icon>
+          </div>
+          <div id="app" class="app-wrapper">
+            <section class="character-info">
+              <header class="character-header">
+                <div class="character-header-wrapper">
+                  <h2 class="character-name">A.I.M.</h2>
+                  <p class="character-description">
+                    AIM is a terrorist organization bent on destroying the
+                    world.
+                  </p>
+                </div>
+              </header>
+            </section>
+          </div>
+        </section>
+
+        <section id="seeker" class="seeker">
+          <div class="seeker-wrapper">
+            <div id="seeker-top" class="seeker-top">
+              <div class="seeker-top-wrapper">
+                <div id="seeker-alert" class="seeker-alert-container">
+                  <ion-icon name="alert-circle-outline"></ion-icon>
+                  <span>Type something before!</span>
+                </div>
+
+                <div class="seeker-input-container">
+                  <input
+                    type="text"
+                    id="seeker-input"
+                    class="seeker-input"
+                    placeholder="Search hero or villain here..."
+                  />
+                </div>
+
+                <div
+                  id="seeker-button-eraser"
+                  class="seeker-icon-container eraser"
+                >
+                  <ion-icon name="close-outline"></ion-icon>
+                </div>
+
+                <div
+                  id="seeker-button-search"
+                  class="seeker-icon-container search"
+                >
+                  <ion-icon name="search-outline"></ion-icon>
+                </div>
+              </div>
+            </div>
+
+            <div class="seeker-bottom">
+              <div id="seeker-bottom" class="seeker-bottom-wrapper"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./js/helpers/scroll-reveal-min.js"></script>
+    <script src="./js/helpers/lazyloading-min.js"></script>
+    <script src="./js/index.js" type="module"></script>
+  </body>
+</html>
