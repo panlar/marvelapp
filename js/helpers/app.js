@@ -52,7 +52,6 @@ async function printCharacter(url = "") {
     app.$app.innerHTML = "";
     let data = await getData(url),
       result = data.data.results[0];
-    console.log(data);
 
     const info = {
         id: result.id,
@@ -130,7 +129,6 @@ async function printCharacter(url = "") {
       });
     });
 
-    console.log(info.urls);
 
     for (const log in info.logs) {
       let loga = info.logs[log],
@@ -198,7 +196,6 @@ async function printCharacter(url = "") {
     sectionUrls.innerHTML += `
     <div class="attribution"></div>
     `;
-    console.log(sectionUrls);
     sectionUrls.querySelector(".log-loader").classList.remove("active");
   } catch (error) {
     console.log(error);
